@@ -1,0 +1,9 @@
+services:
+  rowing-ml-api:
+    build:
+      context: .
+      dockerfile: rowing_ml_service/Dockerfile
+    container_name: rowing-ml-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
